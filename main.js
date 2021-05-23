@@ -151,6 +151,33 @@ const addNums = (num1 = 1, num2 = 2) => {
     return num1 + num2;
 }
 console.log(addNums(5, 5));
+// class
+
+
+class Person {
+    constructor(firstName, lastName, dob) {
+
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dob = new Date(dob);
+
+
+    } 
+    getBirthYear() {
+        return this.dob.getFullYear();
+    }
+    getFullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+const person1 = new Person('Mahmoud', 'Chaieb', '12-31-1995');
+const person2 = new Person('mary', 'mob', '12-12-2020');
+q = person2.getBirthYear();
+console.log(q);
+f = person1.getFullName();
+console.log(f);
+
+
 
 
 
